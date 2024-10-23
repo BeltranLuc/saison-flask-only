@@ -33,17 +33,7 @@ Le projet est structuré comme suit :
     ├── custom_function.py          # Fonctions utilitaires pour le traitement des données
     ├── model.py                    # Chargement et gestion des modèles de machine learning
     ├── static                      # Fichiers CSS pour le style de l'application
-    │   ├── common.css
-    │   ├── index.css
-    │   ├── mode_photo.css
-    │   ├── mode_photo_result.css
-    │   ├── mode_video.css
-    │   └── uploads                 # Dossier pour les images uploadées par les utilisateurs
     ├── templates                   # Fichiers HTML de l'application
-    │   ├── index.html
-    │   ├── mode_photo.html
-    │   ├── mode_photo_result.html
-    │   └── mode_video.html
 ```
 
 ## Prérequis
