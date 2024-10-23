@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" class="page_format">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/common.css">
+    <link rel="stylesheet" href="../static/index.css">
+    <title>Seasonal Fruits and Veggies AI Calendar</title>
+</head>
+<body>
+    <form method="post"> 
+        <div>
+            <h1>s<span>AI</span>son </h1>
+
+            <select name="model_id">
+                {% for id, model in app_dict['MODELS'].items() %}
+                    <option value="{{ id }}" {% if id == app_dict['CURRENT_MODEL_ID'] %}selected{% endif %}>
+                        {{ model }}
+                    </option>
+                {% endfor %}
+            </select>
+
+            <br/>
+
+            <select name="month_id">
+                {% for id, month in app_dict['MONTHS'].items() %}
+                    <option value="{{ id }}" {% if id == app_dict['CURRENT_MONTH_ID'] %}selected{% endif %}>
+                        {{ month }}
+                    </option>
+                {% endfor %}
+            </select>
+
+            <br/>
+
+            <select name="country_id">
+                {% for id, month in app_dict['COUNTRIES'].items() %}
+                    <option value="{{ id }}" {% if id == app_dict['CURRENT_COUNTRY_ID'] %}selected{% endif %}>
+                        {{ month }}
+                    </option>
+                {% endfor %}
+            </select>
+
+            <br/>
+            <br/>
+            
+            <button type="submit" formaction="{{ url_for('mode_photo') }}">Mode photo</button>
+            <br/>
+            <button type="submit" formaction="{{ url_for('mode_video_page') }}">Mode vidéo</button>
+        </div>
+    </form>
+</body>
+</html>
