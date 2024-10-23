@@ -163,6 +163,6 @@ cython_debug/
 
 
 
-.history
-*.keras
+.history/
 *.ipynb
+.gitattributes
