@@ -74,7 +74,8 @@ Le projet est structuré comme suit :
 5. Lancez l'application en local :
 
    ```bash
-   python src/app.py
+   cd src
+   flask run
    ```
 
 6. Ouvrez votre navigateur à l'adresse suivante :
